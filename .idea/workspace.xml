@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="339d2e53-f4e2-48e7-bca0-c0802c854a8e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,6 +122,21 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.watch" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -128,7 +146,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601241271654</updated>
-      <workItem from="1601241272713" duration="164000" />
+      <workItem from="1601241272713" duration="2139000" />
     </task>
     <servers />
   </component>
@@ -140,21 +158,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="770" y="399" key="#Composer/0.0.1920.1040@0.0.1920.1040" timestamp="1601241365439" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601241345143">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601241808072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601241345143" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601241345143">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601241808072" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601241808072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601241345143" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601241345143">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601241808072" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601241808072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601241345143" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601241345143">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601241808072" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601241808072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601241345143" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601241808072" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601243317457">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601243317457" />
   </component>
 </project>
