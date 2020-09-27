@@ -14,6 +14,13 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
@@ -146,7 +153,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601241271654</updated>
-      <workItem from="1601241272713" duration="4816000" />
+      <workItem from="1601241272713" duration="8879000" />
     </task>
     <servers />
   </component>
@@ -158,22 +165,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="770" y="399" key="#Composer/0.0.1920.1040@0.0.1920.1040" timestamp="1601241365439" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601241808072">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601246944854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601241808072" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601241808072">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601246944854" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601246944854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601241808072" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601241808072">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601246944854" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601246944854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601241808072" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601241808072">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601246944854" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601246944854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601241808072" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601246944854" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601246039536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
