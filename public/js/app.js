@@ -1931,6 +1931,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -1938,18 +1946,43 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      open: true
+      friends: []
     };
   },
   created: function created() {
-    /*this.$on('closeChat', ()=> this.close());*/
-  },
-  mounted: function mounted() {
-    console.log('Component mounted.');
+    this.getFriends();
   },
   methods: {
-    close: function close() {
-      this.open = false;
+    close: function close(friend) {
+      friend.session.open = false;
+    },
+    getFriends: function getFriends() {
+      var _this = this;
+
+      axios.post('/get-friends').then(function (res) {
+        _this.friends = res.data.data;
+      });
+    },
+    openChat: function openChat(friend) {
+      this.friends.forEach(function (friend) {
+        if (friend.session) {
+          friend.session.open = false;
+        }
+      });
+
+      if (friend.session) {
+        friend.session.open = true;
+      } else {
+        this.createSession(friend);
+      }
+    },
+    createSession: function createSession(friend) {
+      axios.post('/session/create', {
+        friend_id: friend.id
+      }).then(function (response) {
+        friend.session = response.data.data;
+        friend.session.open = true;
+      });
     }
   }
 });
@@ -2000,6 +2033,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "MessageComponent",
+  props: ['friend'],
   data: function data() {
     return {
       chats: [],
@@ -38387,39 +38421,74 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
-      _vm._m(0),
+      _c("div", { staticClass: "col-md-3" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _vm._v("Private Chat App")
+          ]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            { staticClass: "list-group" },
+            _vm._l(_vm.friends, function(friend) {
+              return _c(
+                "a",
+                {
+                  key: friend.name,
+                  attrs: { href: "" },
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.openChat(friend)
+                    }
+                  }
+                },
+                [
+                  _c("li", { staticClass: "list-group-item" }, [
+                    _vm._v(
+                      "\n                            " +
+                        _vm._s(friend.name) +
+                        "\n                        "
+                    )
+                  ])
+                ]
+              )
+            }),
+            0
+          )
+        ])
+      ]),
       _vm._v(" "),
       _c(
         "div",
         { staticClass: "col-md-9" },
-        [
-          _vm.open
-            ? _c("message-component", { on: { closeChat: _vm.close } })
+        _vm._l(_vm.friends, function(friend) {
+          return friend.session
+            ? _c(
+                "span",
+                { key: friend.name },
+                [
+                  friend.session.open
+                    ? _c("message-component", {
+                        attrs: { friend: friend },
+                        on: {
+                          closeChat: function($event) {
+                            return _vm.close(friend)
+                          }
+                        }
+                      })
+                    : _vm._e()
+                ],
+                1
+              )
             : _vm._e()
-        ],
-        1
+        }),
+        0
       )
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-3" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [_vm._v("Private Chat App")]),
-        _vm._v(" "),
-        _c("ul", { staticClass: "list-group" }, [
-          _c("li", { staticClass: "list-group-item" }, [
-            _vm._v("Cras justo odio")
-          ])
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -38444,7 +38513,7 @@ var render = function() {
   return _c("div", { staticClass: "card card-default chat-box" }, [
     _c("div", { staticClass: "card-header" }, [
       _c("b", { class: { "text-danger": _vm.session_block } }, [
-        _vm._v("\n            User name\n            "),
+        _vm._v("\n            " + _vm._s(_vm.friend.name) + "\n            "),
         _vm.session_block ? _c("span", [_vm._v("(Blocked)")]) : _vm._e()
       ]),
       _vm._v(" "),
